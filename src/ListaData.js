@@ -8,8 +8,12 @@ class ListaData {
                     ]}
         );
     }
+    agregarTarea(tarea){
+        console.log(tarea);
+        this.tareas.push(tarea);
+    }
 }
 
-var VarListaData = new ListaData;
+var VarListaData = new ListaData();
 
 export default VarListaData;
