@@ -30,4 +30,4 @@ class App extends Component {
   }
 }
 
-export default observer(App);
+export default observer(App); 
