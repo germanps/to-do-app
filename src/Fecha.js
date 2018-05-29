@@ -3,20 +3,11 @@ import React, { Component } from 'react';
 class Fecha extends Component{
    render(){
       const full = new Date();
-      const meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-      const dias = [
-         'Domingo',
-         'Lunes',
-         'Martes',
-         'Miercoles',
-         'Jueves',
-         'Viernes',
-         'Sábado',
-      ]
+      const meses = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      const dias = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
       const dia = full.getDate(),
             sem = full.getDay(),
-            mes = full.getMonth(),
-            anio = full.getFullYear();
+            mes = full.getMonth();
       const fecha = `${dias[sem]} ${dia}  ${meses[mes]}`; 
 
       return(

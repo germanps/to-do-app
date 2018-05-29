@@ -23,18 +23,16 @@ class Lista extends Component{
         ) );
 
         return(
-            <div className="container">
+            <div className="container-fluid">
                 <div className="header row">
-                    <div className="col-md-12">
-                        <h2>Lista</h2>
+                    <div className="mask col-md-12">
+                        <h2>My Tasks</h2>
                         <Fecha />
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-12">
+                <div className="row">         
+                    <div className="content col-md-12">
                         <input onKeyPress={ this.enviarTarea.bind(this) }/>
-                    </div>            
-                    <div className="col-md-12">
                         <ul className="list-group">
                             {lista}
                         </ul>
