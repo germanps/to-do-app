@@ -13,7 +13,7 @@ class Lista extends Component{
     render(){
         let lista = [];
         VarListaData.tareas.forEach((valor, index) => (
-            lista.push(<li key={index}>{valor}</li>)
+            lista.push(<li onClick={ () => VarListaData.eliminarTarea(index)} key={index}>{valor}</li>)
         ) );
 
         return(
