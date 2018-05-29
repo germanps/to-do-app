@@ -3,9 +3,7 @@ import { extendObservable } from 'mobx';
 class ListaData {
     constructor(){
         extendObservable(this,
-            {tareas: ['React',
-                      'Javascript'
-                    ]}
+            {tareas: []}
         );
     }
     agregarTarea(tarea){

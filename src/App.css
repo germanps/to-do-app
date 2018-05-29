@@ -30,3 +30,12 @@
 .Counter-odd {
     color: cornflowerblue;
 }
+/*New*/
+
+
+
+/*List items*/
+.list-group-item{
+  display: flex;
+  justify-content: space-between;
+}

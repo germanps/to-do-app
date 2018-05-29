@@ -15,25 +15,32 @@ class Lista extends Component{
         let lista = [];
         VarListaData.tareas.forEach((valor, index) => (
             lista.push(
-                <li className="list-group-item" onClick={ () => VarListaData.eliminarTarea(index)} key={index}>{valor}</li>
+                <li className="list-group-item" key={index}>
+                    <span>{valor}</span>
+                    <span className="elimininar-tarea" onClick={ () => VarListaData.eliminarTarea(index)}>x</span>
+                </li>
             )
         ) );
 
         return(
             <div className="container">
-                <div className="header">
-                    <h2>Lista</h2>
-                    <Fecha />
+                <div className="header row">
+                    <div className="col-md-12">
+                        <h2>Lista</h2>
+                        <Fecha />
+                    </div>
                 </div>
-                <input onKeyPress={ this.enviarTarea.bind(this) }/>
                 <div className="row">
+                    <div className="col-md-12">
+                        <input onKeyPress={ this.enviarTarea.bind(this) }/>
+                    </div>            
                     <div className="col-md-12">
                         <ul className="list-group">
                             {lista}
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> 
         )
     }
 }
