@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import VarListaData from './ListaData';
+import { observer } from 'mobx-react';
+
 class Lista extends Component{
     enviarTarea(e){
         //enviar valor cuando se aprete Intro
         if (e.which === 13) {
             VarListaData.agregarTarea(e.target.value);
+            e.target.value = "";
         }
     }
     render(){
         let lista = [];
-        const agregar = VarListaData.tareas.forEach((valor, index) => (
+        VarListaData.tareas.forEach((valor, index) => (
             lista.push(<li key={index}>{valor}</li>)
         ) );
 
@@ -29,4 +32,4 @@ class Lista extends Component{
     }
 }
 
-export default Lista;
+export default observer(Lista);
